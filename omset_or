@@ -1,0 +1,14 @@
+SELECT [FICMISDATE]
+        ,[KODECABANGBARU]
+      ,[NAMACABANG]
+        ,[TGLLPENCAIRAN]
+		,[PENCAIRANPOKOKLCY]
+		,NOLOAN
+         ,OSPOKOKLCY
+                                   ,[LOANTYPE]
+      ,[TANGGAL_PERPANJANG]
+      ,[KOLBSM]
+      ,[KOLCIF]
+	        FROM [pawning].[dbo].[2019-05-14.PencairanPembiayaan]
+  where LOANTYPE IN('MUR0011','MUR0013','MUR0014','MUR0016','MUR0018','RHN0001','RHN0002') and 
+   (TGLLPENCAIRAN  like'%2019%' or TANGGAL_PERPANJANG like '%2019%');
